@@ -1,0 +1,33 @@
+.pin-input-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pin-box {
+    width: 45px;
+    height: 55px;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    background: transparent;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-bottom: 2px solid var(--primary-blue);
+    }
+
+    .active-pin {
+        border-bottom: 2px solid var(--primary-blue);
+    }
+}
+
+
+.image-panel img {
+    margin-bottom: -32px;
+}

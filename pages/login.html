@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - E-Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/front-page.css">
+</head>
+<body>
+
+    <main class="register-container">
+        
+        <section class="form-panel">
+            <div class="form-content">
+                
+                <header class="logo">
+                    <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
+                    <span>E-Wallet</span>
+                </header>
+
+                <h1>Hello Welcome Back 👋</h1>
+                <p class="subtitle">Fill out the form correctly or you can login with several option.</p>
+
+                <div class="social-logins">
+                    <button class="social-btn">
+                        <img src="../assets/icons/google.svg" alt="Google Logo" class="social-icon"> 
+                        Sign In With Google
+                    </button>
+                    <button class="social-btn">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook Logo" class="social-icon"> 
+                        Sign In With Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>Or</span>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <img src="../assets/icons/mail.svg" alt="Email Icon" class="icon-left">
+                            <input type="email" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <img src="../assets/icons/Password.svg" alt="Lock Icon" class="icon-left">
+                            <input type="password" id="password" placeholder="Enter Your Password" required>
+                            <img src="../assets/icons/EyeSlash.svg" alt="Hide Password" class="icon-right">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+
+                <nav class="auth-nav">
+                    <p>Not Have An Account? <a href="./pages/register.html">Register</a></p>
+                </nav>
+
+            </div>
+        </section>
+
+        <section class="image-panel">
+            <img src="../assets/images/3d-hand-making-cashless-payment-from-smartphone 1.png" alt="3D Hand holding a wallet">
+        </section>
+
+    </main>
+
+</body>
+</html>
