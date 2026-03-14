@@ -28,6 +28,10 @@
 }
 
 
-.image-panel img {
-    margin-bottom: -32px;
+.image-panel {
+    align-items: end;
+
+    img {
+        margin-bottom: -32px;
+    }
 }
