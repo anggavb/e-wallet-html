@@ -5,6 +5,8 @@
     --border-color: #e5e5e5;
     --bg-white: #ffffff;
     --bg-light: #F8F9FA;
+    --bg-gray: #E8E8E84D;
+    --linear-gradient-blue: linear-gradient(0deg, #2948FF 0%, #396AFC 100%);
 }
 
 *, *::before, *::after {

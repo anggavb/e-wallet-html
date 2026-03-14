@@ -1,0 +1,27 @@
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .icon-left {
+        position: absolute;
+        left: 1rem;
+        color: #a0a0a0;
+        font-size: 1.1rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.9rem 2.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        outline: none;
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        transition: border-color 0.2s;
+    }
+
+    input:focus {
+        border-color: var(--primary-blue);
+    }
+}
