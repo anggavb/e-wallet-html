@@ -1,0 +1,28 @@
+:root {
+    --primary-blue: #2948FF;
+    --text-dark: #222222;
+    --text-gray: #7a7a7a;
+    --border-color: #e5e5e5;
+    --bg-white: #ffffff;
+    --bg-light: #F8F9FA;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-blue);
+    font-size: 20px;
+    font-weight: 600;
+}
