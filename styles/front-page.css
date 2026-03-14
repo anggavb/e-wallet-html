@@ -165,7 +165,6 @@ h1 {
 
 .auth-nav a {
     color: var(--primary-blue);
-    text-decoration: none;
 }
 
 .auth-nav a:hover {
