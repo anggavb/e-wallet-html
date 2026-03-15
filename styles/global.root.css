@@ -38,3 +38,12 @@ body {
 a {
     text-decoration: none;
 }
+
+.text-success {
+    color: var(--success);
+}
+
+.text-danger {
+    color: var(--danger);
+    font-weight: 600;
+}
