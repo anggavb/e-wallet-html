@@ -35,6 +35,10 @@
 }
 
 .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
     background: var(--primary-blue);
     color: var(--bg-white);
     padding: 12px 32px;
