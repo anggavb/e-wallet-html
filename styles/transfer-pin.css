@@ -157,7 +157,6 @@ textarea.form-control {
     border-bottom: 1px solid var(--border-color);
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--bg-light);
 }
 
 .modal-body {
