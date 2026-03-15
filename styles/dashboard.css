@@ -1,0 +1,252 @@
+@import url('./global.root.css');
+@import url('./global.btn.css');
+@import url('./global.dashboard.css');
+
+/* --- Layout Grid --- */
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr 340px;
+    min-height: calc(100vh - 70px);
+}
+
+/* --- Sidebar Navigation --- */
+.nav-links {
+    li.active {
+        a {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+    }
+
+    li a:hover:not(.active) {
+        background-color: #f3f4f6;
+        color: var(--text-dark);
+    }
+}
+
+/* Summary Grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.summary-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.icon-box {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.summary-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.trend {
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.trend.positive { color: var(--success); }
+.trend.negative { color: var(--danger); }
+
+/* Fast Service */
+.fast-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Chart Section */
+.chart-section {
+    flex-grow: 1;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chart-filters {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.filter-dropdown {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #f9fafb;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* CSS Bar Chart Layout */
+.chart-container {
+    display: flex;
+    height: 300px;
+    gap: 1rem;
+    position: relative;
+}
+
+/* --- Right Panel (History) --- */
+.right-panel {
+    padding: 2rem 2rem 2rem 0;
+}
+
+.history-card {
+    height: 100%;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.history-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.see-all {
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tx-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px; /* Rounded square like design */
+    object-fit: cover;
+}
+
+.tx-info {
+    flex-grow: 1;
+}
+
+.tx-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.tx-info p {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-top: 0.15rem;
+}
+
+.tx-amount {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.tx-amount.positive { color: var(--success); }
+.tx-amount.negative { color: var(--danger); }
+
+/* --- Media Queries (Responsif) --- */
+
+/* Tablet & Laptop Kecil */
+@media (max-width: 1200px) {
+    .layout-wrapper {
+        grid-template-columns: 200px 1fr; /* Sembunyikan right panel, letakkan di bawah */
+    }
+    
+    .right-panel {
+        grid-column: 2;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+/* Tablet (Portrait) */
+@media (max-width: 992px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .layout-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none; /* Dalam implementasi nyata, ganti dengan hamburger menu */
+    }
+
+    .topbar {
+        padding: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fast-service {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .actions .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .right-panel {
+        grid-column: 1;
+        padding: 1rem;
+    }
+    
+    .chart-container {
+        overflow-x: auto; /* Agar chart bisa digeser di layar kecil */
+    }
+}
