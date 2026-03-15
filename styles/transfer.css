@@ -1,0 +1,182 @@
+.transfer-page .layout-wrapper {
+    grid-template-columns: 240px 1fr;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* Stepper Progress */
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-gray);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.step.active {
+    color: var(--text-dark);
+}
+
+.step-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--text-gray);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.step.active .step-circle {
+    background-color: var(--primary-blue);
+}
+
+.step-line {
+    flex-grow: 0;
+    width: 60px;
+    height: 0;
+    border-top: 2px dashed #d1d5db;
+}
+
+/* People List Card */
+.people-list-card {
+    padding: 2rem;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.list-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.list-title p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-top: 0.25rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    width: 300px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    font-family: var(--font-main);
+}
+
+.search-box i {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+}
+
+/* Daftar Orang (Zebra Striping) */
+.people-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+/* Membuat baris belang-belang (Zebra Striping) */
+.person-item:nth-child(even) {
+    background-color: #f9fafb; 
+}
+
+.person-item img {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.person-name {
+    flex: 1;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.person-phone {
+    flex: 1;
+    color: var(--text-gray);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.person-action {
+    color: var(--text-gray);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.person-action:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Media Query untuk Halaman Transfer --- */
+@media (max-width: 768px) {
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+
+    .stepper {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .step-line {
+        display: none; /* Sembunyikan garis putus-putus di layar kecil agar tidak berantakan */
+    }
+
+    .person-item {
+        gap: 1rem;
+    }
+    
+    .person-phone {
+        text-align: left;
+    }
+}
