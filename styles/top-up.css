@@ -1,0 +1,169 @@
+/* =========================================
+   STYLE UNTUK HALAMAN TOP UP
+   ========================================= */
+
+/* Layout 2 Kolom untuk area konten utama Top Up */
+.top-up-page .layout-wrapper {
+    grid-template-columns: 240px 1fr;
+}
+
+.top-up-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.top-up-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 17px 32px;
+    border: 1px solid var(--border-color);
+}
+
+.top-up-summary {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+/* --- Payment Methods List & Custom Radio --- */
+.payment-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    border: 1px solid transparent;
+}
+
+.payment-option:hover {
+    background-color: #f3f4f6;
+}
+
+/* Menyembunyikan radio button asli */
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+/* Membuat custom radio button */
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Efek saat radio button dipilih */
+.payment-option input[type="radio"]:checked + .radio-custom {
+    border-color: var(--primary-color);
+}
+
+.payment-option input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Placeholder Logo Bank (Karena kita tidak pakai gambar eksternal) */
+.bank-logo {
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-right: 1.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.bri-logo { background-color: #00529C; color: white; }
+.dana-logo { background-color: #118EEA; color: white; }
+.bca-logo { background-color: #0060AF; color: white; }
+.gopay-logo { background-color: #00AED6; color: white; }
+.ovo-logo { background-color: #4C2A86; color: white; }
+
+.payment-name {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* --- Summary Card (Kolom Kanan) --- */
+.summary-card {
+    padding: 2rem;
+}
+
+.summary-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.summary-label {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.summary-value {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.summary-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+.total-row .summary-label {
+    font-weight: 600;
+}
+
+.total-row .summary-value {
+    font-size: 1.1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.summary-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* --- Media Query untuk Top Up --- */
+@media (max-width: 992px) {
+    .top-up-container {
+        flex-direction: column;
+    }
+    .top-up-summary {
+        width: 100%;
+    }
+}

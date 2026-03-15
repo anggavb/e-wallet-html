@@ -72,8 +72,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    background-color: #eef2ff;
-    color: var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
     padding: 0.25rem 0.6rem;
     border-radius: 6px;
     font-size: 0.75rem;
@@ -118,14 +118,15 @@ textarea.form-control {
 }
 
 .btn-submit-transfer {
+    display: flex;
+    justify-content: center;
     background-color: #1e3a8a;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--bg-white);
     padding: 1rem;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     border: none;
-    cursor: not-allowed;
     margin-top: 1rem;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Wallet - Enter PIN</title>
+    <title>E-Wallet - Transfer Detail</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -55,12 +55,12 @@
             </div>
 
             <div class="stepper">
-                <div class="step completed">
+                <div class="step">
                     <div class="step-circle">1</div>
                     <span>Find People</span>
                 </div>
                 <div class="step-line"></div>
-                <div class="step active-dark">
+                <div class="step completed">
                     <div class="step-circle">2</div>
                     <span>Set Nominal</span>
                 </div>
@@ -100,37 +100,9 @@
                     <textarea placeholder="Enter Some Notes" class="form-control" rows="4"></textarea>
                 </div>
 
-                <button class="btn btn-submit-transfer disabled">Submit & Transfer</button>
+                <a href="./transfer-pin.html" class="btn btn-submit-transfer">Submit & Transfer</a>
             </section>
         </main>
-    </div>
-
-    <div class="modal-overlay">
-        <div class="modal-content pin-modal">
-            <div class="modal-header">
-                <span>TRANSFER TO GHALUH 1</span>
-            </div>
-            
-            <div class="modal-body">
-                <h2>Enter Your Pin 👋</h2>
-                <p>Enter Your Pin For Transaction</p>
-
-                <div class="pin-inputs">
-                    <input type="text" maxlength="1" value="1" class="pin-box filled" readonly>
-                    <input type="text" maxlength="1" class="pin-box">
-                    <input type="text" maxlength="1" class="pin-box">
-                    <input type="text" maxlength="1" class="pin-box">
-                    <input type="text" maxlength="1" class="pin-box">
-                    <input type="text" maxlength="1" class="pin-box">
-                </div>
-
-                <a href="./transfer-success.html" class="btn btn-primary btn-full">Next</a>
-                
-                <div class="modal-footer">
-                    <p>Forgot Your Pin? <a href="./change-pin.html" class="reset-link">Reset</a></p>
-                </div>
-            </div>
-        </div>
     </div>
 
 </body>
