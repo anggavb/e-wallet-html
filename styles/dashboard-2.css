@@ -1,0 +1,108 @@
+/* =========================================
+   STYLE OVERRIDES UNTUK DASHBOARD V2 
+   ========================================= */
+
+/* Topbar V2 */
+.dashboard-v2 {
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        li a {
+            border-left: 4px solid transparent;
+            border-radius: 0 8px 8px 0;
+        }
+
+        li.active a {
+            background-color: #eef2ff;
+            color: var(--primary-blue);
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 6px;
+        }
+    }
+}
+
+/* Top Cards Layout V2 */
+.dashboard-v2 {
+    .layout-wrapper { grid-template-columns: 240px 1fr; } /* supaya jadi 2 baris */
+    .top-cards-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.5rem;
+    }
+    .complex-balance-card h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+    .balance-details {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    .detail-item {
+        p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+        h4 {
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        h4.income { color: var(--success); }
+        h4.expense { color: var(--danger); }
+        h4 .trend { font-size: 0.75rem; display: flex; align-items: center; gap: 0.15rem; }
+    }
+}
+
+/* Fast Service Card V2 Adjustment */
+.dashboard-v2 {
+    .fast-service.flex-col-center {
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .align-self-start {
+        align-self: center;
+    }
+}
+
+.dashboard-v2 .secondary-cards-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-content: flex-start;
+    .right-panel {
+        padding: 0;
+    }
+}
+
+.dashboard-v2 .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dashboard-v2 .dot.income-dot { background-color: var(--primary-blue); }
+.dashboard-v2 .dot.expense-dot { background-color: var(--danger); }
+
+/* Responsive adjustments for V2 Top Cards */
+@media (max-width: 992px) {
+    .dashboard-v2 .top-cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
