@@ -28,10 +28,9 @@
 .btn-filled {
     background: var(--bg-white);
     color: var(--primary-blue);
-}
-
-.btn-filled:hover {
-    background: #f0f0f0;
+    &:hover {
+        background: #f0f0f0;
+    }
 }
 
 .btn-primary {
@@ -42,18 +41,30 @@
     background: var(--primary-blue);
     color: var(--bg-white);
     padding: 12px 32px;
-}
-
-.btn-primary:hover {
-    background: #2a44cc;
+    &:hover {
+        background: #2a44cc;
+    }
 }
 
 .btn-white {
     background: var(--bg-white);
     color: var(--primary-blue);
     padding: 12px 32px;
+    &:hover {
+        background: #e6e6e6;
+    }
 }
 
-.btn-white:hover {
-    background: #e6e6e6;
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    &:hover {
+        background-color: #2740cc;
+    }
 }

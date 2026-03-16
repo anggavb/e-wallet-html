@@ -81,6 +81,7 @@ h1 {
     text-align: center;
     color: var(--text-gray);
     font-size: 0.85rem;
+    gap: 1rem;
 }
 
 .divider::before, 
@@ -88,10 +89,6 @@ h1 {
     content: '';
     flex: 1;
     border-bottom: 1px solid var(--border-color);
-}
-
-.divider span {
-    padding: 0 1rem;
 }
 
 .input-group {
@@ -140,21 +137,6 @@ h1 {
 
 .input-wrapper input:focus {
     border-color: var(--primary-blue);
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    cursor: pointer;
-}
-
-.submit-btn:hover {
-    background-color: #2740cc;
 }
 
 .auth-nav {
