@@ -101,7 +101,7 @@
 .dashboard-v2 .dot.expense-dot { background-color: var(--danger); }
 
 /* Responsive adjustments for V2 Top Cards */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .dashboard-v2 .top-cards-wrapper {
         grid-template-columns: 1fr;
     }

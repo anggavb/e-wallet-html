@@ -184,8 +184,7 @@
 
 /* --- Media Queries (Responsif) --- */
 
-/* Tablet & Laptop Kecil */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .layout-wrapper {
         grid-template-columns: 200px 1fr; /* Sembunyikan right panel, letakkan di bawah */
     }
@@ -196,57 +195,8 @@
     }
 }
 
-/* Tablet (Portrait) */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .summary-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-    .layout-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        display: none; /* Dalam implementasi nyata, ganti dengan hamburger menu */
-    }
-
-    .topbar {
-        padding: 1rem;
-    }
-
-    .main-content {
-        padding: 1rem;
-    }
-
-    .summary-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .fast-service {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .actions .btn {
-        flex: 1;
-        justify-content: center;
-    }
-
-    .right-panel {
-        grid-column: 1;
-        padding: 1rem;
-    }
-    
-    .chart-container {
-        overflow-x: auto; /* Agar chart bisa digeser di layar kecil */
     }
 }

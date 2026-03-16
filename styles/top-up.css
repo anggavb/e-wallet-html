@@ -158,8 +158,7 @@
     line-height: 1.5;
 }
 
-/* --- Media Query untuk Top Up --- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .top-up-container {
         flex-direction: column;
     }

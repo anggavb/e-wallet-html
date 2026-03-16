@@ -215,15 +215,3 @@ textarea.form-control {
     color: var(--primary-blue);
     font-weight: 500;
 }
-
-/* Media Query untuk Modal */
-@media (max-width: 576px) {
-    .modal-body {
-        padding: 1.5rem;
-    }
-    .pin-box {
-        width: 35px;
-        height: 45px;
-        font-size: 1.5rem;
-    }
-}
