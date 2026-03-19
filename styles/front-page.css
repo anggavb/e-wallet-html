@@ -14,11 +14,11 @@ body {
 .form-panel {
     display: flex;
     background-color: var(--bg-white);
-    width: 49%;
-    border-radius: 0 40px 40px 0;
+    width: 100%;
+    border-radius: 0;
     justify-content: center;
     align-items: center;
-    padding: 3rem 2rem;
+    padding: 1.5rem 1rem;
 }
 
 .form-content {
@@ -31,14 +31,14 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--text-dark);
     line-height: 1.3;
     font-weight: 500;
 }
 
 .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-gray);
     line-height: 1.6;
 }
@@ -55,11 +55,11 @@ h1 {
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.7rem;
     background: transparent;
     border: 1px solid var(--border-color);
     border-radius: 25px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-dark);
     cursor: pointer;
@@ -126,11 +126,11 @@ h1 {
 
 .input-wrapper input {
     width: 100%;
-    padding: 0.9rem 2.5rem;
+    padding: 0.75rem 2.5rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     outline: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-dark);
     transition: border-color 0.2s;
 }
@@ -152,7 +152,7 @@ h1 {
 }
 
 .image-panel {
-    display: flex;
+    display: none;
     width: 51%;
     justify-content: center;
     align-items: center;
@@ -170,4 +170,89 @@ h1 {
     max-width: 90%;
     height: auto;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+@media (min-width: 640px) {
+    .form-panel {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .social-btn {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .input-wrapper input {
+        padding: 0.9rem 2.5rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #register-container {
+        flex-direction: row;
+    }
+
+    .form-panel {
+        width: 55%;
+        border-radius: 0 40px 40px 0;
+        padding: 2.5rem 2rem;
+    }
+
+    .image-panel {
+        display: flex;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-panel {
+        width: 49%;
+        padding: 3rem 2rem;
+    }
+
+    .image-panel {
+        width: 51%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .form-panel {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .form-content {
+        max-width: 560px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .form-panel {
+        padding: 4rem 3rem;
+    }
+
+    .form-content {
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }

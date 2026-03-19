@@ -1,8 +1,3 @@
-/* =========================================
-   STYLE OVERRIDES UNTUK DASHBOARD V2 
-   ========================================= */
-
-/* Topbar V2 */
 #dashboard-v2 {
     .topbar-right {
         display: flex;
@@ -29,24 +24,21 @@
             border-radius: 6px;
         }
     }
-}
-
-/* Top Cards Layout V2 */
-#dashboard-v2 {
-    .layout-wrapper { grid-template-columns: 240px 1fr; } /* supaya jadi 2 baris */
+    .layout-wrapper { grid-template-columns: 1fr; }
     .top-cards-wrapper {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     .complex-balance-card h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 600;
         margin-top: 0.5rem;
     }
     .balance-details {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 1rem;
         margin-top: 1.5rem;
     }
     .detail-item {
@@ -66,43 +58,78 @@
         h4.expense { color: var(--danger); }
         h4 .trend { font-size: 0.75rem; display: flex; align-items: center; gap: 0.15rem; }
     }
-}
-
-/* Fast Service Card V2 Adjustment */
-#dashboard-v2 {
     .fast-service.flex-col-center {
-        /* flex-direction: column; */
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
     }
     .align-self-start {
         align-self: center;
     }
+    .secondary-cards-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-content: flex-start;
+        #right-panel {
+            padding: 0;
+        }
+    }
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .dot.income-dot { background-color: var(--primary-blue); }
+    .dot.expense-dot { background-color: var(--danger); }
 }
 
-#dashboard-v2 .secondary-cards-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
-    align-content: flex-start;
-    #right-panel {
-        padding: 0;
+
+@media (min-width: 640px) {
+    #dashboard-v2 .complex-balance-card h2 {
+        font-size: 1.5rem;
+        .balance-details {
+            flex-direction: row;
+            gap: 2rem;
+        }
+        .fast-service.flex-col-center {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    #dashboard-v2 .layout-wrapper {
+        grid-template-columns: 200px 1fr;
+        .secondary-cards-wrapper {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #dashboard-v2 .layout-wrapper {
+        grid-template-columns: 240px 1fr;
+        .top-cards-wrapper {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+}
+
+@media (min-width: 1280px) {
+    #dashboard-v2 .layout-wrapper {
+        grid-template-columns: 260px 1fr;
     }
 }
 
-#dashboard-v2 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-#dashboard-v2 .dot.income-dot { background-color: var(--primary-blue); }
-#dashboard-v2 .dot.expense-dot { background-color: var(--danger); }
-
-/* Responsive adjustments for V2 Top Cards */
-@media (max-width: 1024px) {
-    #dashboard-v2 .top-cards-wrapper {
-        grid-template-columns: 1fr;
+@media (min-width: 1536px) {
+    #dashboard-v2 .layout-wrapper {
+        grid-template-columns: 280px 1fr;
     }
 }

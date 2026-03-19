@@ -14,10 +14,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.75rem;
     background-color: var(--bg-white);
     border-bottom: 1px solid var(--border-color);
-    height: 70px;
+    height: 56px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -32,6 +32,7 @@ a {
 }
 
 .username {
+    display: none;
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-gray);
@@ -54,13 +55,13 @@ a {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     width: 200px;
     padding: 0.5rem;
-    display: none; /* Default disembunyikan */
+    display: none;
     flex-direction: column;
     z-index: 1000;
 }
 
 .profile-dropdown.show {
-    display: flex; /* Dibuat 'show' secara default untuk meniru gambar desain */
+    display: flex;
 }
 
 .dropdown-item {
@@ -88,12 +89,11 @@ a {
     background-color: var(--bg-light);
 }
 
-/* Sidebar */
 #sidebar {
+    display: none;
     background-color: var(--bg-color);
     border-right: 1px solid var(--border-color);
     padding: 2rem 1rem;
-    display: flex;
     flex-direction: column;
 }
 
@@ -117,18 +117,18 @@ a {
 
 /* --- Main Content --- */
 #main-content {
-    padding: 2rem;
+    padding: 1rem 0.75rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 /* Cards General */
 .card {
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 .card-title {
@@ -138,4 +138,70 @@ a {
     color: var(--text-gray);
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+@media (min-width: 640px) {
+    #topbar {
+        padding: 0.75rem 1rem;
+        height: 64px;
+    }
+
+    .username {
+        display: inline;
+    }
+
+    #main-content {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        display: flex;
+        padding: 1.5rem 0.75rem;
+    }
+
+    #topbar {
+        padding: 1rem 2rem;
+        height: 70px;
+    }
+
+    #main-content {
+        padding: 2rem;
+    }
+
+    .nav-links li a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #sidebar {
+        padding: 2rem 1rem;
+    }
+
+    .nav-links li a {
+        padding: 0.875rem 1.25rem;
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 1280px) {
+    #main-content {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    #main-content {
+        padding: 2.5rem 3rem;
+        max-width: 1400px;
+    }
 }
