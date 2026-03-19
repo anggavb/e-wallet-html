@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="../styles/dashboard-2.css">
 </head>
-<body class="dashboard-v2">
+<body id="dashboard-v2">
 
-    <header class="topbar">
+    <header id="topbar">
         <div class="logo">
             <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
             <span>E-Wallet</span>
@@ -39,7 +39,7 @@
     </header>
 
     <div class="layout-wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar">
             <nav>
                 <ul class="nav-links">
                     <li class="active"><a href="./dashboard.html"><img src="../assets/icons/dashboard-two-blue.svg" alt="Dashboard Icon" class="nav-icon">Dashboard</a></li>
@@ -52,59 +52,63 @@
             </nav>
         </aside>
 
-        <main class="main-content">
+        <main id="main-content">
             
-            <section class="top-cards-wrapper">
-                <div class="card complex-balance-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/balance.svg" alt="Balance Icon">
+            <section>
+                <div class="top-cards-wrapper">
+                    <div class="card complex-balance-card">
+                        <div class="card-title">
+                            <div class="icon-box">
+                                <img src="../assets/icons/balance.svg" alt="Balance Icon">
+                            </div>
+                            <span>Balance</span>
                         </div>
-                        <span>Balance</span>
+                        <h2>Rp.120.000</h2>
+                        
+                        <div class="balance-details">
+                            <div class="detail-item">
+                                <p>Income</p>
+                                <h4 class="income">Rp.200.000 <span class="trend">+2% <img src="../assets/icons/stonk.svg" alt=""></span></h4>
+                            </div>
+                            <div class="detail-item">
+                                <p>Expense</p>
+                                <h4 class="expense">Rp.100.000 <span class="trend">+5% <img src="../assets/icons/not-stonk.svg" alt=""></span></h4>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Rp.120.000</h2>
-                    
-                    <div class="balance-details">
-                        <div class="detail-item">
-                            <p>Income</p>
-                            <h4 class="income">Rp.200.000 <span class="trend">+2% <img src="../assets/icons/stonk.svg" alt=""></span></h4>
+    
+                    <div class="card fast-service flex-col-center">
+                        <h3 class="align-self-start">Fast Service</h3>
+                        <div class="actions">
+                            <button class="btn btn-primary"><img src="../assets/icons/u_money-insert.svg" alt=""> Top Up</button>
+                            <button class="btn btn-primary"><img src="../assets/icons/send-white.svg" alt=""> Transfer</button>
                         </div>
-                        <div class="detail-item">
-                            <p>Expense</p>
-                            <h4 class="expense">Rp.100.000 <span class="trend">+5% <img src="../assets/icons/not-stonk.svg" alt=""></span></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card fast-service flex-col-center">
-                    <h3 class="align-self-start">Fast Service</h3>
-                    <div class="actions">
-                        <button class="btn btn-primary"><img src="../assets/icons/u_money-insert.svg" alt=""> Top Up</button>
-                        <button class="btn btn-primary"><img src="../assets/icons/send-white.svg" alt=""> Transfer</button>
                     </div>
                 </div>
             </section>
 
-            <section class="secondary-cards-wrapper">
-                <section class="card chart-section">
-                    <div class="chart-header">
-                        <h3>Financial Chart</h3>
-                        <div class="chart-filters">
-                            <select class="filter-dropdown">
-                                <option>7 Days</option>
-                            </select>
-                            <select class="filter-dropdown">
-                                <option>All</option>
-                            </select>
+            <section>
+                <div class="secondary-cards-wrapper">
+                    <div class="card chart-section">
+                        <div class="chart-header">
+                            <h3>Financial Chart</h3>
+                            <div class="chart-filters">
+                                <select class="filter-dropdown">
+                                    <option>7 Days</option>
+                                </select>
+                                <select class="filter-dropdown">
+                                    <option>All</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <img src="../assets/images/financial-chart.svg" alt="Financial Chart" class="chart-image" width="100%" height="472">
                         </div>
                     </div>
-                    
-                    <div class="chart-container">
-                        <img src="../assets/images/financial-chart.svg" alt="Financial Chart" class="chart-image" width="100%" height="472">
-                    </div>
-                </section>
+                </div>
 
-                <aside class="right-panel">
+                <aside id="right-panel">
                     <div class="card history-card">
                         <div class="history-header">
                             <h3>Transaction History</h3>

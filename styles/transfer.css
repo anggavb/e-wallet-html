@@ -1,4 +1,4 @@
-.transfer-page .layout-wrapper {
+#transfer-page .layout-wrapper {
     grid-template-columns: 240px 1fr;
 }
 

@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="../styles/transfer.css">
     <link rel="stylesheet" href="../styles/transfer-pin.css">
 </head>
-<body class="transfer-page">
+<body id="transfer-page">
 
-    <header class="topbar">
+    <header id="topbar">
         <div class="logo">
             <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
             <span>E-Wallet</span>
@@ -35,7 +35,7 @@
     </header>
 
     <div class="layout-wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar">
             <nav>
                 <ul class="nav-links">
                     <li><a href="./dashboard.html"><img src="../assets/icons/dashboard-two-normal.svg" alt="Dashboard Icon" class="nav-icon">Dashboard</a></li>
@@ -48,7 +48,7 @@
             </nav>
         </aside>
 
-        <main class="main-content">
+        <main id="main-content">
             
             <div class="page-header">
                 <h2 class="page-title"><img src="../assets/icons/send-blue.svg" alt=""> Transfer Money</h2>
@@ -71,36 +71,38 @@
                 </div>
             </div>
 
-            <section class="card form-card">
-                <div class="form-group">
-                    <label class="section-label">People Information</label>
-                    <div class="selected-person">
-                        <img src="../assets/images/Rectangle 648.png" alt="Ghaluh 1" class="person-avatar-large">
-                        <div class="person-details">
-                            <h4>Ghaluh 1</h4>
-                            <p>(239) 555-0108</p>
-                            <span class="badge-verified"><img src="../assets/icons/verified.svg" alt=""> Verified</span>
+            <section>
+                <div class="card form-card">
+                    <div class="form-group">
+                        <label class="section-label">People Information</label>
+                        <div class="selected-person">
+                            <img src="../assets/images/Rectangle 648.png" alt="Ghaluh 1" class="person-avatar-large">
+                            <div class="person-details">
+                                <h4>Ghaluh 1</h4>
+                                <p>(239) 555-0108</p>
+                                <span class="badge-verified"><img src="../assets/icons/verified.svg" alt=""> Verified</span>
+                            </div>
+                            <i class="ph ph-star favorite-icon"></i>
                         </div>
-                        <i class="ph ph-star favorite-icon"></i>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="section-label">Amount</label>
-                    <p class="section-desc">Type the amount you want to transfer</p>
-                    <div class="input-with-icon">
-                        <!-- <img src="../assets/icons/u_money-bill.svg" alt=""> -->
-                        <input type="text" placeholder="Enter Nominal Transfer" class="form-control">
+    
+                    <div class="form-group">
+                        <label class="section-label">Amount</label>
+                        <p class="section-desc">Type the amount you want to transfer</p>
+                        <div class="input-with-icon">
+                            <!-- <img src="../assets/icons/u_money-bill.svg" alt=""> -->
+                            <input type="text" placeholder="Enter Nominal Transfer" class="form-control">
+                        </div>
                     </div>
+    
+                    <div class="form-group">
+                        <label class="section-label">Notes</label>
+                        <p class="section-desc">You can add some notes for this transaction</p>
+                        <textarea placeholder="Enter Some Notes" class="form-control" rows="4"></textarea>
+                    </div>
+    
+                    <a href="./transfer-pin.html" class="btn btn-submit-transfer">Submit & Transfer</a>
                 </div>
-
-                <div class="form-group">
-                    <label class="section-label">Notes</label>
-                    <p class="section-desc">You can add some notes for this transaction</p>
-                    <textarea placeholder="Enter Some Notes" class="form-control" rows="4"></textarea>
-                </div>
-
-                <a href="./transfer-pin.html" class="btn btn-submit-transfer">Submit & Transfer</a>
             </section>
         </main>
     </div>

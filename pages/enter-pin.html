@@ -14,42 +14,48 @@
 </head>
 <body>
 
-    <main class="register-container">
+    <main id="register-container">
         
-        <section class="form-panel">
-            <div class="form-content">
-                
-                <header class="logo">
-                    <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
-                    <span>E-Wallet</span>
-                </header>
-
-                <h1>Enter Your Pin 👋</h1>
-                <p class="subtitle">Please save your pin because this so important.</p>
-
-                <form action="#" method="POST">
-
-                    <div class="pin-input-group">
-                        <input type="text" maxlength="1" class="pin-box active-pin" value="1" inputmode="numeric" autofocus>
-                        <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
-                        <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
-                        <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
-                        <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
-                        <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
-                    </div>
-
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
-
-                <nav class="auth-nav">
-                    <p>Forgot Your Pin? <a href="./change-pin.html">Reset</a></p>
-                </nav>
-
+        <section>
+            <div class="form-panel">
+                <div class="form-content">
+                    
+                    <header>
+                        <div class="logo">
+                            <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
+                            <span>E-Wallet</span>
+                        </div>
+                    </header>
+    
+                    <h1>Enter Your Pin 👋</h1>
+                    <p class="subtitle">Please save your pin because this so important.</p>
+    
+                    <form action="#" method="POST">
+    
+                        <div class="pin-input-group">
+                            <input type="text" maxlength="1" class="pin-box active-pin" value="1" inputmode="numeric" autofocus>
+                            <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
+                            <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
+                            <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
+                            <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
+                            <input type="text" maxlength="1" class="pin-box" inputmode="numeric">
+                        </div>
+    
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+    
+                    <nav id="auth-nav">
+                        <p>Forgot Your Pin? <a href="./change-pin.html">Reset</a></p>
+                    </nav>
+    
+                </div>
             </div>
         </section>
 
-        <section class="image-panel">
-            <img src="../assets/images/enter-pin.png" alt="3D Hand holding a wallet">
+        <section>
+            <div class="image-panel">
+                <img src="../assets/images/enter-pin.png" alt="3D Hand holding a wallet">
+            </div>
         </section>
 
     </main>

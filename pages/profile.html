@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="topbar">
+    <header id="topbar">
         <div class="logo">
             <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
             <span>E-Wallet</span>
@@ -24,7 +24,7 @@
     </header>
 
     <div class="layout-wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar">
             <nav>
                 <ul class="nav-links">
                     <li><a href="./dashboard.html"><img src="../assets/icons/dashboard-two-normal.svg" alt="Dashboard Icon" class="nav-icon">Dashboard</a></li>
@@ -37,72 +37,78 @@
             </nav>
         </aside>
 
-        <main class="main-content">
+        <main id="main-content">
             
-            <section class="summary-grid">
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/balance.svg" alt="Balance Icon">
+            <section>
+                <div class="summary-grid">
+                    <div class="card summary-card">
+                        <div class="card-title">
+                            <div class="icon-box">
+                                <img src="../assets/icons/balance.svg" alt="Balance Icon">
+                            </div>
+                            <span>Balance</span>
                         </div>
-                        <span>Balance</span>
+                        <h2>Rp.120.000</h2>
+                        <p class="trend positive">+2% <img src="../assets/icons/stonk.svg" alt=""> <span>3 Days Ago</span></p>
                     </div>
-                    <h2>Rp.120.000</h2>
-                    <p class="trend positive">+2% <img src="../assets/icons/stonk.svg" alt=""> <span>3 Days Ago</span></p>
-                </div>
-                
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/income.svg" alt="Income Icon">
+                    
+                    <div class="card summary-card">
+                        <div class="card-title">
+                            <div class="icon-box">
+                                <img src="../assets/icons/income.svg" alt="Income Icon">
+                            </div>
+                            <span>Income</span>
                         </div>
-                        <span>Income</span>
+                        <h2>Rp2.120.000</h2>
+                        <p class="trend positive">+11.01% <img src="../assets/icons/stonk.svg" alt=""> </p>
                     </div>
-                    <h2>Rp2.120.000</h2>
-                    <p class="trend positive">+11.01% <img src="../assets/icons/stonk.svg" alt=""> </p>
-                </div>
-
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/expense.svg" alt="Expense Icon">
+    
+                    <div class="card summary-card">
+                        <div class="card-title">
+                            <div class="icon-box">
+                                <img src="../assets/icons/expense.svg" alt="Expense Icon">
+                            </div>
+                            <span>Expense</span>
                         </div>
-                        <span>Expense</span>
+                        <h2>Rp.200.000</h2>
+                        <p class="trend negative">-5.06% <img src="../assets/icons/not-stonk.svg" alt=""> </p>
                     </div>
-                    <h2>Rp.200.000</h2>
-                    <p class="trend negative">-5.06% <img src="../assets/icons/not-stonk.svg" alt=""> </p>
                 </div>
             </section>
 
-            <section class="card fast-service">
-                <h3>Fast Service</h3>
-                <div class="actions">
-                    <a class="btn btn-primary" href="./top-up.html"><img src="../assets/icons/u_money-insert.svg" alt=""> Top Up</a>
-                    <a class="btn btn-primary" href="./transfer.html"><img src="../assets/icons/send-white.svg" alt=""> Transfer</a>
+            <section>
+                <div class="card fast-service">
+                    <h3>Fast Service</h3>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="./top-up.html"><img src="../assets/icons/u_money-insert.svg" alt=""> Top Up</a>
+                        <a class="btn btn-primary" href="./transfer.html"><img src="../assets/icons/send-white.svg" alt=""> Transfer</a>
+                    </div>
                 </div>
             </section>
 
-            <section class="card chart-section">
-                <div class="chart-header">
-                    <h3>Income Chart</h3>
-                    <div class="chart-filters">
-                        <select class="filter-dropdown">
-                            <option>7 Days</option>
-                        </select>
-                        <select class="filter-dropdown">
-                            <option>Income</option>
-                        </select>
+            <section>
+                <div class="card chart-section">
+                    <div class="chart-header">
+                        <h3>Income Chart</h3>
+                        <div class="chart-filters">
+                            <select class="filter-dropdown">
+                                <option>7 Days</option>
+                            </select>
+                            <select class="filter-dropdown">
+                                <option>Income</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="chart-container">
-                    <img src="../assets/images/Chart.png" alt="Income Chart" class="chart-image" width="100%" height="472">
+                    
+                    <div class="chart-container">
+                        <img src="../assets/images/Chart.png" alt="Income Chart" class="chart-image" width="100%" height="472">
+                    </div>
                 </div>
             </section>
 
         </main>
 
-        <aside class="right-panel">
+        <aside id="right-panel">
             <div class="card history-card">
                 <div class="history-header">
                     <h3>Transaction History</h3>

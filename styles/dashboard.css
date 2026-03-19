@@ -113,7 +113,7 @@
 }
 
 /* --- Right Panel (History) --- */
-.right-panel {
+#right-panel {
     padding: 2rem 2rem 2rem 0;
 }
 
@@ -189,7 +189,7 @@
         grid-template-columns: 200px 1fr; /* Sembunyikan right panel, letakkan di bawah */
     }
     
-    .right-panel {
+    #right-panel {
         grid-column: 2;
         padding: 0 2rem 2rem 2rem;
     }

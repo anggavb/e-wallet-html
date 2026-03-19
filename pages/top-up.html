@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Wallet Dashboard</title>
+    <title>E-Wallet - Top Up Account</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/dashboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/top-up.css">
 
-    <header class="topbar">
+</head>
+<body id="top-up-page">
+
+    <header id="topbar">
         <div class="logo">
             <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
             <span>E-Wallet</span>
@@ -20,11 +22,20 @@
             <span class="username">Ghaluh Wizard</span>
             <img src="../assets/images/Ellipse 185.png" alt="Profile" class="avatar">
             <img src="../assets/icons/chevron-down.svg" alt="Navigation Arrow">
+
+            <!-- <div class="profile-dropdown show">
+                <a href="#" class="dropdown-item active">
+                    <img src="../assets/icons/person.svg" alt=""> Profile
+                </a>
+                <a href="#" class="dropdown-item text-danger">
+                    <img src="../assets/icons/exit.svg" alt=""> Keluar
+                </a>
+            </div> -->
         </div>
     </header>
 
     <div class="layout-wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar">
             <nav>
                 <ul class="nav-links">
                     <li><a href="./dashboard.html"><img src="../assets/icons/dashboard-two-normal.svg" alt="Dashboard Icon" class="nav-icon">Dashboard</a></li>
@@ -37,161 +48,115 @@
             </nav>
         </aside>
 
-        <main class="main-content">
+        <main id="main-content">
             
-            <section class="summary-grid">
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/balance.svg" alt="Balance Icon">
-                        </div>
-                        <span>Balance</span>
-                    </div>
-                    <h2>Rp.120.000</h2>
-                    <p class="trend positive">+2% <img src="../assets/icons/stonk.svg" alt=""> <span>3 Days Ago</span></p>
-                </div>
+            <div class="page-header">
+                <h2 class="page-title"><img src="../assets/icons/Upload.svg" alt="Top Up Icon"> Top Up Account</h2>
+            </div>
+
+            <div class="top-up-container">
                 
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/income.svg" alt="Income Icon">
+                <div class="top-up-form">
+                    
+                    <div class="form-group">
+                        <label class="section-label">Account Information</label>
+                        <div class="selected-person">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Ghaluh Wizard" class="person-avatar-large">
+                            <div class="person-details">
+                                <h4>Ghaluh Wizard</h4>
+                                <p>(239) 555-0108</p>
+                                <span class="badge-verified"><i class="ph-fill ph-check-circle"></i> Verified</span>
+                            </div>
                         </div>
-                        <span>Income</span>
                     </div>
-                    <h2>Rp2.120.000</h2>
-                    <p class="trend positive">+11.01% <img src="../assets/icons/stonk.svg" alt=""> </p>
-                </div>
 
-                <div class="card summary-card">
-                    <div class="card-title">
-                        <div class="icon-box">
-                            <img src="../assets/icons/expense.svg" alt="Expense Icon">
+                    <div class="form-group">
+                        <label class="section-label">Amount</label>
+                        <p class="section-desc">Type the amount you want to transfer to your e-wallet account</p>
+                        <div class="input-with-icon">
+                            <i class="ph ph-money"></i>
+                            <input type="text" placeholder="Enter Nominal Transfer" class="form-control">
                         </div>
-                        <span>Expense</span>
                     </div>
-                    <h2>Rp.200.000</h2>
-                    <p class="trend negative">-5.06% <img src="../assets/icons/not-stonk.svg" alt=""> </p>
-                </div>
-            </section>
 
-            <section class="card fast-service">
-                <h3>Fast Service</h3>
-                <div class="actions">
-                    <a class="btn btn-primary" href="./top-up.html"><img src="../assets/icons/u_money-insert.svg" alt=""> Top Up</a>
-                    <a class="btn btn-primary" href="./transfer.html"><img src="../assets/icons/send-white.svg" alt=""> Transfer</a>
-                </div>
-            </section>
+                    <!-- <div class="form-group">
+                        <label class="section-label">Payment Method</label>
+                        <p class="section-desc">Choose your payment method for top up account</p>
+                        
+                        <div class="payment-methods-list">
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method" checked>
+                                <span class="radio-custom"></span>
+                                <div class="bank-logo bri-logo">BRI</div>
+                                <span class="payment-name">Bank Rakyat Indonesia</span>
+                            </label>
 
-            <section class="card chart-section">
-                <div class="chart-header">
-                    <h3>Income Chart</h3>
-                    <div class="chart-filters">
-                        <select class="filter-dropdown">
-                            <option>7 Days</option>
-                        </select>
-                        <select class="filter-dropdown">
-                            <option>Income</option>
-                        </select>
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method">
+                                <span class="radio-custom"></span>
+                                <div class="bank-logo dana-logo">DANA</div>
+                                <span class="payment-name">Dana</span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method">
+                                <span class="radio-custom"></span>
+                                <div class="bank-logo bca-logo">BCA</div>
+                                <span class="payment-name">Bank Central Asia</span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method">
+                                <span class="radio-custom"></span>
+                                <div class="bank-logo gopay-logo">Gopay</div>
+                                <span class="payment-name">Gopay</span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method">
+                                <span class="radio-custom"></span>
+                                <div class="bank-logo ovo-logo">OVO</div>
+                                <span class="payment-name">Ovo</span>
+                            </label>
+                        </div>
+                    </div> -->
+                </div>
+
+                <aside id="top-up-summary">
+                    <div class="card summary-card">
+                        <h3 class="summary-title">Payment</h3>
+                        
+                        <div class="summary-row">
+                            <span class="summary-label">Order</span>
+                            <span class="summary-value">Idr. 40.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Delivery</span>
+                            <span class="summary-value">Idr. 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Tax</span>
+                            <span class="summary-value">Idr. 4000</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row total-row">
+                            <span class="summary-label">Sub Total</span>
+                            <span class="summary-value">Idr.44.000</span>
+                        </div>
+
+                        <button class="btn btn-primary btn-full mt-4">Submit</button>
+                        
+                        <p class="summary-note">
+                            *Get Discount if you pay with Bank Central Asia
+                        </p>
                     </div>
-                </div>
-                
-                <div class="chart-container">
-                    <img src="../assets/images/Chart.png" alt="Income Chart" class="chart-image" width="100%" height="472">
-                </div>
-            </section>
+                </aside>
+
+            </div>
 
         </main>
-
-        <aside class="right-panel">
-            <div class="card history-card">
-                <div class="history-header">
-                    <h3>Transaction History</h3>
-                    <a href="./history.html" class="see-all">See All</a>
-                </div>
-                
-                <div class="transaction-list">
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/robert-fox.png" alt="Robert Fox" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Robert Fox</h4>
-                            <p>Transfer</p>
-                        </div>
-                        <div class="tx-amount positive">+Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/floyd-miles.png" alt="Floyd Miles" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Floyd Miles</h4>
-                            <p>Send</p>
-                        </div>
-                        <div class="tx-amount negative">-Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/ujang.png" alt="Ujang" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Ujang</h4>
-                            <p>Send</p>
-                        </div>
-                        <div class="tx-amount negative">-Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/raulemons.png" alt="Raulemons" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Raulemons</h4>
-                            <p>Transfer</p>
-                        </div>
-                        <div class="tx-amount positive">+Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/reiva.png" alt="Reiva" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Reiva</h4>
-                            <p>Transfer</p>
-                        </div>
-                        <div class="tx-amount positive">+Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/thobie.png" alt="Thobie" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Thobie</h4>
-                            <p>Send</p>
-                        </div>
-                        <div class="tx-amount negative">-Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/buzjany.png" alt="Buzjany" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Buzjany</h4>
-                            <p>Transfer</p>
-                        </div>
-                        <div class="tx-amount positive">+Rp50.000</div>
-                    </div>
-
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/adisurya.png" alt="Adisurya" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Adisurya</h4>
-                            <p>Send</p>
-                        </div>
-                        <div class="tx-amount negative">-Rp50.000</div>
-                    </div>
-                    <div class="transaction-item">
-                        <img src="../assets/images/dashboard/miguelle.png" alt="Miguelle" class="tx-avatar">
-                        <div class="tx-info">
-                            <h4>Miguelle</h4>
-                            <p>Transfer</p>
-                        </div>
-                        <div class="tx-amount positive">+Rp50.000</div>
-                    </div>
-                </div>
-            </div>
-        </aside>
     </div>
 
 </body>

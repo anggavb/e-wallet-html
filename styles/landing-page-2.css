@@ -14,7 +14,7 @@ body {
     padding: 0 20px;
 }
 
-.navbar {
+#navbar {
     background-color: var(--primary-blue);
     padding: 15px 0;
     color: var(--bg-white);
@@ -433,7 +433,7 @@ body {
     }
 }
 
-.footer {
+#footer {
     background-color: var(--primary-blue);
     color: var(--bg-white);
     padding: 60px 0 20px;

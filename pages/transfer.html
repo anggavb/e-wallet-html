@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="../styles/transfer.css">
 </head>
-<body class="transfer-page">
+<body id="transfer-page">
 
-    <header class="topbar">
+    <header id="topbar">
         <div class="logo">
             <img src="../assets/icons/money-wallet.png" alt="wallet" width="32" />
             <span>E-Wallet</span>
@@ -34,7 +34,7 @@
     </header>
 
     <div class="layout-wrapper">
-        <aside class="sidebar">
+        <aside id="sidebar">
             <nav>
                 <ul class="nav-links">
                     <li><a href="./dashboard.html"><img src="../assets/icons/dashboard-two-normal.svg" alt="Dashboard Icon" class="nav-icon">Dashboard</a></li>
@@ -47,7 +47,7 @@
             </nav>
         </aside>
 
-        <main class="main-content">
+        <main id="main-content">
             
             <h2 class="page-title">
                 <img src="../assets/icons/send-blue.svg" alt="">
@@ -73,68 +73,70 @@
                 </div>
             </div>
 
-            <section class="card people-list-card">
-                <div class="list-header">
-                    <div class="list-title">
-                        <h3>Find People</h3>
-                        <p>8 Result Found For Ghaluh</p>
+            <section>
+                <div class="card people-list-card">
+                    <div class="list-header">
+                        <div class="list-title">
+                            <h3>Find People</h3>
+                            <p>8 Result Found For Ghaluh</p>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="Enter Number Or Full Name" value="">
+                            <i class="ph ph-magnifying-glass"></i>
+                        </div>
                     </div>
-                    <div class="search-box">
-                        <input type="text" placeholder="Enter Number Or Full Name" value="">
-                        <i class="ph ph-magnifying-glass"></i>
-                    </div>
-                </div>
-
-                <div class="people-list">
-                    <a href="./transfer-detail.html">
+    
+                    <div class="people-list">
+                        <a href="./transfer-detail.html">
+                            <div class="person-item">
+                                <img src="https://i.pravatar.cc/150?img=11" alt="User">
+                                <span class="person-name">Ghaluh 1</span>
+                                <span class="person-phone">(239) 555-0108</span>
+                                <i class="ph ph-star person-action"></i>
+                            </div>
+                        </a>
                         <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=11" alt="User">
-                            <span class="person-name">Ghaluh 1</span>
-                            <span class="person-phone">(239) 555-0108</span>
+                            <img src="https://i.pravatar.cc/150?img=12" alt="User">
+                            <span class="person-name">Ghaluh 2</span>
+                            <span class="person-phone">(480) 555-0103</span>
                             <i class="ph ph-star person-action"></i>
                         </div>
-                    </a>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=12" alt="User">
-                        <span class="person-name">Ghaluh 2</span>
-                        <span class="person-phone">(480) 555-0103</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=13" alt="User">
-                        <span class="person-name">Ghaluh 3</span>
-                        <span class="person-phone">(225) 555-0118</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=14" alt="User">
-                        <span class="person-name">Ghaluh 4</span>
-                        <span class="person-phone">(406) 555-0120</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=15" alt="User">
-                        <span class="person-name">Ghaluh 5</span>
-                        <span class="person-phone">(303) 555-0105</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=16" alt="User">
-                        <span class="person-name">Ghaluh 6</span>
-                        <span class="person-phone">(808) 555-0111</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=17" alt="User">
-                        <span class="person-name">Ghaluh 7</span>
-                        <span class="person-phone">(671) 555-0110</span>
-                        <i class="ph ph-star person-action"></i>
-                    </div>
-                    <div class="person-item">
-                        <img src="https://i.pravatar.cc/150?img=18" alt="User">
-                        <span class="person-name">Ghaluh 8</span>
-                        <span class="person-phone">(270) 555-0117</span>
-                        <i class="ph ph-star person-action"></i>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=13" alt="User">
+                            <span class="person-name">Ghaluh 3</span>
+                            <span class="person-phone">(225) 555-0118</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=14" alt="User">
+                            <span class="person-name">Ghaluh 4</span>
+                            <span class="person-phone">(406) 555-0120</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=15" alt="User">
+                            <span class="person-name">Ghaluh 5</span>
+                            <span class="person-phone">(303) 555-0105</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=16" alt="User">
+                            <span class="person-name">Ghaluh 6</span>
+                            <span class="person-phone">(808) 555-0111</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=17" alt="User">
+                            <span class="person-name">Ghaluh 7</span>
+                            <span class="person-phone">(671) 555-0110</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
+                        <div class="person-item">
+                            <img src="https://i.pravatar.cc/150?img=18" alt="User">
+                            <span class="person-name">Ghaluh 8</span>
+                            <span class="person-phone">(270) 555-0117</span>
+                            <i class="ph ph-star person-action"></i>
+                        </div>
                     </div>
                 </div>
             </section>
