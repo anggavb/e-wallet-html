@@ -13,6 +13,8 @@
     --linear-gradient-blue: linear-gradient(0deg, #2948FF 0%, #396AFC 100%);
     --success: #059669;
     --danger: #dc2626;
+    --font-main: 'Montserrat', sans-serif;
+    --font-logo: 'Nunito Sans', sans-serif;
 }
 
 *, *::before, *::after {
@@ -22,11 +24,11 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-main);
 }
 
 .logo {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: var(--font-logo);
     display: flex;
     align-items: center;
     gap: 10px;
