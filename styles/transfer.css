@@ -133,7 +133,7 @@
 .person-name {
     flex: 1;
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--text-gray);
 }
 
 .person-phone {

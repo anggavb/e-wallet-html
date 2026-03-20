@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Wallet - Transfer</title>
+    <title>E-Wallet - History Transaction</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/dashboard.css">
-    <link rel="stylesheet" href="../styles/transfer.css">
+    <link rel="stylesheet" href="../styles/history.css">
 </head>
-<body id="transfer-page">
+<body id="history-page">
 
     <header id="topbar">
         <div class="logo">
@@ -22,11 +22,11 @@
             <img src="../assets/images/Ellipse 185.png" alt="Profile" class="avatar">
             <img src="../assets/icons/chevron-down.svg" alt="Navigation Arrow">
 
-            <div class="profile-dropdown show">
-                <a href="#" class="dropdown-item active">
+            <div class="profile-dropdown">
+                <a href="./profile.html" class="dropdown-item">
                     <img src="../assets/icons/person.svg" alt=""> Profile
                 </a>
-                <a href="#" class="dropdown-item text-danger">
+                <a href="./login.html" class="dropdown-item text-danger">
                     <img src="../assets/icons/exit.svg" alt=""> Keluar
                 </a>
             </div>
@@ -48,94 +48,154 @@
         </aside>
 
         <main id="main-content">
-            
-            <h2 class="page-title">
-                <img src="../assets/icons/send-blue.svg" alt="">
-                 Transfer Money
-            </h2>
-            <div class="page-header">
-            </div>
 
-            <div class="stepper">
-                <div class="step active">
-                    <div class="step-circle">1</div>
-                    <span>Find People</span>
-                </div>
-                <div class="step-line"></div>
-                <div class="step">
-                    <div class="step-circle">2</div>
-                    <span>Set Nominal</span>
-                </div>
-                <div class="step-line"></div>
-                <div class="step">
-                    <div class="step-circle">3</div>
-                    <span>Finish</span>
-                </div>
-            </div>
+            <h2 class="page-title">
+                <img src="../assets/icons/history.svg" alt="">
+                History Transaction
+            </h2>
 
             <section>
-                <div class="card people-list-card">
-                    <div class="list-header">
-                        <div class="list-title">
-                            <h3>Find People</h3>
-                            <p>8 Result Found For Ghaluh</p>
-                        </div>
+                <div class="card history-list-card">
+                    <div class="history-list-header">
+                        <h3 class="history-list-title">Find Transaction</h3>
                         <div class="search-box">
-                            <input type="text" placeholder="Enter Number Or Full Name" value="">
-                            <i class="ph ph-magnifying-glass"></i>
+                            <input type="text" id="history-search" placeholder="Enter Number Or Full Name">
+                            <img src="../assets/icons/search.svg" alt="Search" class="search-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                            <span class="search-icon-fallback" style="display:none">🔍</span>
                         </div>
                     </div>
-    
-                    <div class="people-list">
-                        <a href="./transfer-detail.html">
-                            <div class="person-item">
-                                <img src="https://i.pravatar.cc/150?img=11" alt="User">
-                                <span class="person-name">Ghaluh 1</span>
-                                <span class="person-phone">(239) 555-0108</span>
-                                <i class="ph ph-star person-action"></i>
-                            </div>
-                        </a>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=12" alt="User">
-                            <span class="person-name">Ghaluh 2</span>
-                            <span class="person-phone">(480) 555-0103</span>
-                            <i class="ph ph-star person-action"></i>
+
+                    <div class="history-list" id="history-list">
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Ghaluh 1">
+                            <span class="history-name">Ghaluh 1</span>
+                            <span class="history-phone">082116304337</span>
+                            <span class="history-amount positive">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=13" alt="User">
-                            <span class="person-name">Ghaluh 3</span>
-                            <span class="person-phone">(225) 555-0118</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Cameron Williamson">
+                            <span class="history-name">Cameron Williamson</span>
+                            <span class="history-phone">(308) 555-0121</span>
+                            <span class="history-amount negative">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=14" alt="User">
-                            <span class="person-name">Ghaluh 4</span>
-                            <span class="person-phone">(406) 555-0120</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=13" alt="Cody Fisher">
+                            <span class="history-name">Cody Fisher</span>
+                            <span class="history-phone">(704) 555-0127</span>
+                            <span class="history-amount positive">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=15" alt="User">
-                            <span class="person-name">Ghaluh 5</span>
-                            <span class="person-phone">(303) 555-0105</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=14" alt="Kristin Watson">
+                            <span class="history-name">Kristin Watson</span>
+                            <span class="history-phone">(603) 555-0123</span>
+                            <span class="history-amount negative">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=16" alt="User">
-                            <span class="person-name">Ghaluh 6</span>
-                            <span class="person-phone">(808) 555-0111</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=15" alt="Floyd Miles">
+                            <span class="history-name">Floyd Miles</span>
+                            <span class="history-phone">(671) 555-0110</span>
+                            <span class="history-amount positive">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=17" alt="User">
-                            <span class="person-name">Ghaluh 7</span>
-                            <span class="person-phone">(671) 555-0110</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=16" alt="Wade Warren">
+                            <span class="history-name">Wade Warren</span>
+                            <span class="history-phone">(225) 555-0118</span>
+                            <span class="history-amount negative">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="person-item">
-                            <img src="https://i.pravatar.cc/150?img=18" alt="User">
-                            <span class="person-name">Ghaluh 8</span>
-                            <span class="person-phone">(270) 555-0117</span>
-                            <i class="ph ph-star person-action"></i>
+
+                        <div class="history-item">
+                            <img src="https://i.pravatar.cc/150?img=17" alt="Savannah Nguyen">
+                            <span class="history-name">Savannah Nguyen</span>
+                            <span class="history-phone">(217) 555-0113</span>
+                            <span class="history-amount positive">Rp.50.000</span>
+                            <button class="delete-btn" title="Delete">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25L3.75 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination Footer -->
+                    <div class="history-footer">
+                        <span class="history-count">Show 5 History of 100 History</span>
+                        <div class="pagination">
+                            <button class="page-btn" id="prev-btn">Prev</button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                            <button class="page-btn">5</button>
+                            <button class="page-btn">6</button>
+                            <button class="page-btn">7</button>
+                            <button class="page-btn">8</button>
+                            <button class="page-btn">9</button>
+                            <button class="page-btn" id="next-btn">Next</button>
                         </div>
                     </div>
                 </div>
