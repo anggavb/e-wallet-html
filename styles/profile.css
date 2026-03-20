@@ -187,29 +187,6 @@
     }
 }
 
-/* --- Submit Button --- */
-.submit-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    font-family: inherit;
-    cursor: pointer;
-    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
-    margin-top: 0.5rem;
-    &:hover {
-        background-color: var(--primary-hover);
-        box-shadow: 0 4px 14px rgba(41, 72, 255, 0.3);
-    }
-    &:active {
-        transform: scale(0.99);
-    }
-}
-
 @media (min-width: 640px) {
     .page-title {
         font-size: 1.2rem;

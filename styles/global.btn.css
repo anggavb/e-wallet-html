@@ -64,7 +64,13 @@
     border-radius: 8px;
     font-size: 0.95rem;
     cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    margin-top: 0.5rem;
     &:hover {
-        background-color: #2740cc;
+        background-color: var(--primary-hover);
+        box-shadow: 0 4px 14px rgba(41, 72, 255, 0.3);
+    }
+    &:active {
+        transform: scale(0.99);
     }
 }
