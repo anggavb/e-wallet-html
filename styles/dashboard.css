@@ -2,8 +2,6 @@
 @import url('./global.btn.css');
 @import url('./global.dashboard.css');
 
-/* === BASE: Mobile-first (< 640px) === */
-
 /* --- Layout Grid --- */
 .layout-wrapper {
     display: grid;
