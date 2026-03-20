@@ -127,7 +127,6 @@ a {
 .card {
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
     padding: 1rem;
 }
 
@@ -157,7 +156,6 @@ a {
 
     .card {
         padding: 1.5rem;
-        border-radius: 12px;
     }
 }
 
