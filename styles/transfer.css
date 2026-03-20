@@ -97,7 +97,7 @@
     outline: none;
     flex-grow: 1;
     font-size: 0.9rem;
-    font-family: var(--font-main);
+    font-family: inherit;
 }
 
 .search-box i {
